@@ -2,7 +2,7 @@ package Modelo;
 
 public class JuegoConVidas {
 
-    private static final int record = 0;
+    private static int record = 0;
     private final int vidasIniciales;
     private int vidas;
 
@@ -27,4 +27,18 @@ public class JuegoConVidas {
 
         return this.vidas > 0;
     }
+
+    public void reiniciaPartida() {
+        this.vidas = vidasIniciales;
+    }
+
+    public void setActualizaRecord() {
+        if (record == vidas) {
+            System.out.println("Enhorabuena, ha llegado al record!!! ");
+        } else if (vidas > record) {
+            record = vidas;
+            System.out.println("Enhorabuena, ha batido al record!!! ");
+        }
+    }
+
 }

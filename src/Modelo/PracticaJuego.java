@@ -2,6 +2,18 @@ package Modelo;
 
 public class PracticaJuego {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        JuegoConVidas partida1 = new JuegoConVidas(5);
+        partida1.muestraVidasIniciales();
+        partida1.quitaVida();
+
+        JuegoConVidas partida2 = new JuegoConVidas(5);
+        partida2.quitaVida();
+        partida2.setActualizaRecord();
+        partida2.quitaVida();
+
+        partida1.reiniciaPartida();
+        partida1.muestraVidasRestantes();
+        partida1.setActualizaRecord();
+
     }
 }
