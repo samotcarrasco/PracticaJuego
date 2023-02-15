@@ -22,7 +22,7 @@ public class JuegoConVidas {
     public boolean quitaVida() {
         this.vidas--;
         if (this.vidas > 0) {
-            System.out.println("Le quedan: " + vidas + " vidas");
+            System.out.println("Vidas restantes: " + vidas + " vidas");
         } else System.out.println("Juego terminado ");
 
         return this.vidas > 0;
@@ -32,13 +32,16 @@ public class JuegoConVidas {
         this.vidas = vidasIniciales;
     }
 
-    public void setActualizaRecord() {
+    public void actualizaRecord() {
         if (record == vidas) {
-            System.out.println("Enhorabuena, ha llegado al record!!! ");
+            System.out.println("Enhorabuena, ha llegado al record!!! (" + record + ")");
         } else if (vidas > record) {
             record = vidas;
             System.out.println("Enhorabuena, ha batido al record!!! ");
+            System.out.println("\t\tEl nuevo record es: " + record);
         }
     }
+
+    public abstract boolean juego(String cadena);
 
 }

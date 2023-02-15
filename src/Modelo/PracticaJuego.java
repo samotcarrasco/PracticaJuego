@@ -7,13 +7,12 @@ public class PracticaJuego {
         partida1.quitaVida();
 
         JuegoConVidas partida2 = new JuegoConVidas(5);
-        partida2.quitaVida();
-        partida2.setActualizaRecord();
+        partida2.actualizaRecord();
         partida2.quitaVida();
 
         partida1.reiniciaPartida();
         partida1.muestraVidasRestantes();
-        partida1.setActualizaRecord();
+        partida1.actualizaRecord();
 
     }
 }
