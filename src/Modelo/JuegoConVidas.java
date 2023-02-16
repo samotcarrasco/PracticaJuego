@@ -42,6 +42,6 @@ public class JuegoConVidas {
         }
     }
 
-    public abstract boolean juego(String cadena);
+    // public abstract boolean juego(String cadena);
 
 }
