@@ -49,7 +49,7 @@ public class Menu {
             jugar(juegos.recuperarJuego(eligeOpciones()));
             System.out.println("Quiere seguir jugando (s|n)");
             respuesta = MyInput.readString();
-        } while (respuesta == "s");
+        } while (respuesta.equals("s"));
     }
 
 }
