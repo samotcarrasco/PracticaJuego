@@ -1,21 +1,21 @@
 package Modelo;
 
-public class JuegoConVidas {
+public abstract class JuegoConVidas {
 
-    private static int record = 0;
+    private int record = 0;
     private final int vidasIniciales;
-    private int vidas;
+    public int vidas;
 
     JuegoConVidas(int vidas) {
         this.vidas = vidas;
         vidasIniciales = vidas;
     }
 
-    public void muestraVidasIniciales() {
+    void muestraVidasIniciales() {
         System.out.println("Vidas iniciales: " + vidasIniciales);
     }
 
-    public void muestraVidasRestantes() {
+    private void muestraVidasRestantes() {
         System.out.println("Vidas restantes: " + vidas);
     }
 
@@ -28,7 +28,7 @@ public class JuegoConVidas {
         return this.vidas > 0;
     }
 
-    public void reiniciaPartida() {
+    public void reiniciarPartida() {
         this.vidas = vidasIniciales;
     }
 
@@ -42,6 +42,6 @@ public class JuegoConVidas {
         }
     }
 
-    // public abstract boolean juego(String cadena);
+    //public abstract boolean juega (String cadena);
 
 }
