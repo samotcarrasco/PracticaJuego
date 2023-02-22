@@ -8,7 +8,6 @@ public class JuegoAdivinaNumero extends JuegoConVidas implements Jugable {
 
     public JuegoAdivinaNumero(int numVidas) {
         super(numVidas);
-        this.numAdivinar = numeroAleatorio();
     }
 
     public int numeroAleatorio() {
@@ -19,7 +18,7 @@ public class JuegoAdivinaNumero extends JuegoConVidas implements Jugable {
     }
 
     //reescribimos metodo
-    public void reiniciaPartida() {
+    public void reiniciarPartida() {
         super.reiniciarPartida();
         this.numAdivinar = numeroAleatorio();
     }

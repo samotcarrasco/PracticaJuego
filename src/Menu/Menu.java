@@ -12,16 +12,16 @@ public class Menu {
     }
 
     public void jugar(Jugable juego) {
-        String numeroIntento;
+        String numeroIntento; // num�ro que se le solicita al usuario
         juego.reiniciarPartida();
         juego.muestraNombre();
         juego.muestraInfo();
-
-        do {
-            System.out.println("Introduce respuesta");
-            numeroIntento = MyInput.readString();
-        } while (juego.juega(numeroIntento));
+        do{
+            System.out.println("Introduce tu respuesta");
+            numeroIntento= MyInput.readString();
+        }while(juego.juega(numeroIntento));
     }
+
 
     public void mostrarOpciones() {
         System.out.println("¿A qué quieres jugar? \n\t 1.- Adivinar numero \n\t 2.- Adivinar impar \n\t 3.- Adivinar par");

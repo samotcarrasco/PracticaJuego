@@ -6,7 +6,6 @@ public class JuegoAdivinaNumeroPar extends JuegoAdivinaNumero {
 
     public JuegoAdivinaNumeroPar(int vidas) {
         super(vidas);
-        numeroAleatorio();
     }
 
 

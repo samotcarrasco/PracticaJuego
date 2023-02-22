@@ -6,7 +6,6 @@ public class JuegoAdivinaNumeroImpar extends JuegoAdivinaNumero {
 
     public JuegoAdivinaNumeroImpar(int vidas) {
         super(vidas);
-        numeroAleatorio();
     }
 
     public boolean validaNumero(int numero) {

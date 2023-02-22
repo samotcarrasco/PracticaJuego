@@ -11,7 +11,7 @@ public class MenuExt extends Menu {
     @Override
     public void mostrarOpciones() {
         super.mostrarOpciones();
-        System.out.println("\n\t 4.- Ahorcado en Inglés");
+        System.out.println("\t 4.- Ahorcado en Inglés");
     }
 
     @Override
