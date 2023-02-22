@@ -1,24 +1,30 @@
 package Modelo;
 
-public class JuegoAdivinaNumeroPar extends JuegoAdivinaNumero{
+import java.util.Random;
 
-    public JuegoAdivinaNumeroPar(int vidas, int numeroAdivinar) {
-        super(vidas, numeroAdivinar);
+public class JuegoAdivinaNumeroPar extends JuegoAdivinaNumero {
+
+    public JuegoAdivinaNumeroPar(int vidas) {
+        super(vidas);
+        numeroAleatorio();
     }
 
-    public boolean validaNumero(int numero){
-        if (super.validaNumero(numero)){
-            if(numero % 2 == 0) return true;
+
+    public boolean validaNumero(int numero) {
+        if (super.validaNumero(numero)) {
+            if (numero % 2 == 0) return true;
             else {
-                System.out.println ("El numero introducido no es par");
+                System.out.println("El numero introducido no es par");
                 return false;
             }
-        }
-        else return false;
+        } else return false;
     }
 
-
-
+    @Override
+    public int numeroAleatorio() {
+        Random r = new Random(System.currentTimeMillis());
+        return 2 * r.nextInt(6);
+    }
 
     @Override
     public void muestraNombre() {

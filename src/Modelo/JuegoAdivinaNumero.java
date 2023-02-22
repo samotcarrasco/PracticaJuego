@@ -1,12 +1,27 @@
 package Modelo;
 
+import java.util.Random;
+
 public class JuegoAdivinaNumero extends JuegoConVidas implements Jugable {
 
     private int numAdivinar;
 
-    public JuegoAdivinaNumero(int numVidas, int numAdivinar) {
+    public JuegoAdivinaNumero(int numVidas) {
         super(numVidas);
-        this.numAdivinar = numAdivinar;
+        this.numAdivinar = numeroAleatorio();
+    }
+
+    public int numeroAleatorio() {
+        Random r = new Random(System.currentTimeMillis());
+        //int a = r.nextInt(11);
+        //  System.out.println("EL NUMssssssssssssssssssssssssssssssssssssssssssssssssERO ES" + a);
+        return r.nextInt(11);
+    }
+
+    //reescribimos metodo
+    public void reiniciaPartida() {
+        super.reiniciarPartida();
+        this.numAdivinar = numeroAleatorio();
     }
 
     public boolean validaNumero(int numero) {
@@ -36,10 +51,8 @@ public class JuegoAdivinaNumero extends JuegoConVidas implements Jugable {
                 quitaVida();
                 return true;
             }
-        }
-        else return true;
+        } else return true;
     }
-
 
 
     @Override

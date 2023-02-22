@@ -1,16 +1,24 @@
 package Modelo;
 
-public class JuegosReunidos {
-    private Jugable[] juegos = new Jugable[3];
+import java.util.ArrayList;
 
-    public JuegosReunidos(){
-        juegos[0] =  new JuegoAdivinaNumero(5,7);
-        juegos[1] =  new JuegoAdivinaNumeroImpar(5,3);
-        juegos[2] =  new JuegoAdivinaNumeroPar(5,6);
+public class JuegosReunidos {
+    //private final Jugable[] juegos = new Jugable[3];
+
+    private final ArrayList<Jugable> juegos = new ArrayList<Jugable>();
+
+
+    public JuegosReunidos() {
+        juegos.add(new JuegoAdivinaNumero(5));
+        juegos.add(new JuegoAdivinaNumeroImpar(5));
+        juegos.add(new JuegoAdivinaNumeroPar(5));
     }
 
-    public Jugable recuperarJuego(int opcion)  {
-        return juegos[opcion-1];
+    public Jugable recuperarJuego(int opcion) {
+        return juegos.get(opcion - 1);
+    }
 
+    public void agregarJuego(Jugable juego) {
+        juegos.add(juego);
     }
 }
