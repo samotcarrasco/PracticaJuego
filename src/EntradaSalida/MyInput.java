@@ -31,7 +31,13 @@ public class MyInput {
      * @return retorna un número entero de precisión simple
      */
     public static int readInt(){
-        return Integer.parseInt(readString()); }
+        try{
+        return Integer.parseInt(readString());
+        }catch(NumberFormatException nfe){
+            System.out.println("El dato introducido no tiene formato de número entero");
+            return readInt();
+        }
+    }
 // Lee un dato tipo double  desde el teclado
 
     /**

@@ -23,6 +23,7 @@ public class JuegoAdivinaNumero extends JuegoConVidas implements Jugable {
         this.numAdivinar = numeroAleatorio();
     }
 
+    //polimorfismo
     public boolean validaNumero(int numero) {
         if (numero >= 0 && numero <= 10) {
             return true;
@@ -32,10 +33,20 @@ public class JuegoAdivinaNumero extends JuegoConVidas implements Jugable {
         }
     }
 
+public boolean validaFormato(String cad){
+        int numero;
+        try{
+            numero = Integer.parseInt(cad);
+        }catch (NumberFormatException ex){
+            System.out.println("El formato no es correcto, intentelo de nuevo");
+            return false;
+        }
+            return true;
+}
+
     @Override
     public boolean juega(String numero) {
         int numeroIntento = Integer.parseInt(numero);
-
         if (validaNumero(numeroIntento)) {
             if (numeroIntento == numAdivinar) {
                 System.out.println("Acertaste!!!!");

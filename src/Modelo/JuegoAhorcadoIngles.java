@@ -59,6 +59,14 @@ public class JuegoAhorcadoIngles extends JuegoConVidas implements Jugable {
         mostrarArray(guiones);
 
     }
+    public boolean validaFormato(String cad){
+        Character car = cad.charAt(0);
+        if(!((cad.length() == 1) && (Character.isLetter(car)) && (Character.isLowerCase(car)))){
+            System.out.println("El formato no es correcto, intentelo de nuevo");
+            return false;
+        } else return true;
+
+    }
 
     @Override
     public boolean juega(String caracter) {
@@ -72,6 +80,7 @@ public class JuegoAhorcadoIngles extends JuegoConVidas implements Jugable {
                 return false;
             }else  return true;
         }else {
+            mostrarArray(guiones);
             System.out.print("Este caracter no se encuentra en la palabra");
             return quitaVida();
         }

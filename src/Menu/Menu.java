@@ -18,7 +18,9 @@ public class Menu {
         juego.muestraInfo();
         do{
             System.out.println("Introduce tu respuesta");
-            numeroIntento= MyInput.readString();
+            do {
+                numeroIntento = MyInput.readString();
+            } while (!juego.validaFormato(numeroIntento));
         }while(juego.juega(numeroIntento));
     }
 

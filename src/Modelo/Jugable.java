@@ -6,4 +6,6 @@ public interface Jugable {
     public void reiniciarPartida();
     public void muestraNombre();
     public void muestraInfo();
+
+    //public boolean validaFormato(String cad);
 }
