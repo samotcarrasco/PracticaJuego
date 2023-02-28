@@ -20,10 +20,14 @@ public class MyInput {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in),1);
         String  string="";
         try {
-            string = br.readLine(); }
+            string = br.readLine();
+        }
         catch (IOException ex) {
-            System.out.println(ex); }
-        return string; }
+            System.out.println(ex);
+        }
+        return string;
+    }
+
 // Lee un dato tipo int  desde el teclado
 
     /**
@@ -31,10 +35,10 @@ public class MyInput {
      * @return retorna un número entero de precisión simple
      */
     public static int readInt(){
-        try{
-        return Integer.parseInt(readString());
-        }catch(NumberFormatException nfe){
-            System.out.println("El dato introducido no tiene formato de número entero");
+        try {
+            return Integer.parseInt(readString());
+        }catch(NumberFormatException nfe) {
+            System.out.println("El dato introducido no tiene formato de numero entero. Intentelo de nuevo");
             return readInt();
         }
     }
