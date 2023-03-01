@@ -10,6 +10,7 @@ public abstract class JuegoConVidas implements Serializable {
 
     JuegoConVidas(int vidas) {
         this.vidas = vidas;
+        this.vidas = vidas;
         vidasIniciales = vidas;
     }
 
