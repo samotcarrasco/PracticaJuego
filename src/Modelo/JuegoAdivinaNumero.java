@@ -33,16 +33,16 @@ public class JuegoAdivinaNumero extends JuegoConVidas implements Jugable {
         }
     }
 
-public boolean validaFormato(String cad){
+    public boolean validaFormato(String cad) {
         int numero;
-        try{
+        try {
             numero = Integer.parseInt(cad);
-        }catch (NumberFormatException ex){
+        } catch (NumberFormatException ex) {
             System.out.println("El formato no es correcto, intentelo de nuevo");
             return false;
         }
-            return true;
-}
+        return true;
+    }
 
     @Override
     public boolean juega(String numero) {

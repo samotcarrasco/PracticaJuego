@@ -1,10 +1,12 @@
 package Modelo;
 
-public abstract class JuegoConVidas {
+import java.io.Serializable;
 
-    private int record = 0;
+public abstract class JuegoConVidas implements Serializable {
+
     private final int vidasIniciales;
     public int vidas;
+    private int record = 0;
 
     JuegoConVidas(int vidas) {
         this.vidas = vidas;

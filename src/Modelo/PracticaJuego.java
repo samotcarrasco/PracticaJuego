@@ -7,9 +7,10 @@ import Menu.MenuExt;
 public class PracticaJuego {
     public static void main(String[] args) {
 
-        JuegosReunidos juegosReunidos = MyInput.deserialize("datos.dat");
+        JuegosReunidosExt juegosReunidos = JuegosReunidosExt.getInstance(MyInput.leeFichero("words.txt"));
+
         if (juegosReunidos == null)
-            juegosReunidos = new JuegosReunidosExt(MyInput.leeFichero("words.txt"));
+            juegosReunidos = JuegosReunidosExt.getInstance(MyInput.leeFichero("words.txt"));
         Menu menu = new MenuExt(juegosReunidos);
         menu.ejecuta();
         MyInput.serialize(juegosReunidos, "datos.dat");

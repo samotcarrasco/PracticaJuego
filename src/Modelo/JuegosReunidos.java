@@ -1,10 +1,13 @@
 package Modelo;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class JuegosReunidos {
+public class JuegosReunidos implements Serializable {
     //private final Jugable[] juegos = new Jugable[3];
 
+    //según la nueva especificación de Java, no es necesario inluir el tipo al instanciar, es decir, <> puede ir vacío, porque
+    //en la declaración ya le indicamos ele tipo <Jugable>
     private final ArrayList<Jugable> juegos = new ArrayList<Jugable>();
 
 
