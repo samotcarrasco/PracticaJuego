@@ -4,12 +4,11 @@ import java.io.Serializable;
 
 public abstract class JuegoConVidas implements Serializable {
 
-    private final int vidasIniciales=0;
+    private final int vidasIniciales;
     public int vidas;
-    private int record = 0;
+    private int record;
 
     JuegoConVidas(int vidas) {
-        this.vidas = vidas;
         this.vidas = vidas;
         vidasIniciales = vidas;
     }
