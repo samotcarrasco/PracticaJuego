@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public abstract class JuegoConVidas implements Serializable {
 
-    private final int vidasIniciales;
+    private final int vidasIniciales=0;
     public int vidas;
     private int record = 0;
 
