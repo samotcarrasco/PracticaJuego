@@ -8,16 +8,17 @@ import java.util.Random;
  * **/
 public class JuegoAdivinaNumero extends JuegoConVidas implements Jugable {
 	
+	/* 
+	 * añadimos como una constnatnte el número máximo,ya que se utiliza en varias partes.
+	 * de esta forma, si en un futuro lo tenemos que modificar, solo hay que cambiarlo aquí 
+	 * pública para que pueda ser accedida por las clases hijas
+	*/
+	public static final int NUMERO_MAX = 18;
+	
 	// numeroAdivinar representa el atributo propio de la clase JuegoAdivinaNumero
 	private int numeroAdivinar;
-	
-	// añadimos comouna constnatnte el número máximo,ya que se utiliza en varias partes.
-	// de esta forma, si en un futuro lo tenemos que modificar, solo hay que cambiarlo aquí 
-	//pública para que pueda ser accedida por las clases hijas
-	public static final int NUMERO_MAX = 18;
-	public static final int vidas = 12;
-	
-	
+		
+		
 	//Contructor
 	public JuegoAdivinaNumero(int vidas) {
 		super(vidas);
@@ -93,6 +94,5 @@ public class JuegoAdivinaNumero extends JuegoConVidas implements Jugable {
 		System.out.println("Este juego consiste en adivinar un numero entero entre 0 y " + NUMERO_MAX);
 		muestraVidasIniciales();
 	}
-	
 
 }

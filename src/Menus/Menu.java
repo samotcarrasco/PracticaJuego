@@ -27,22 +27,21 @@ public class Menu {
 		}while(juego.juega(intento));
 	}
 	
-		public void mostrarOpciones() {
+	public void mostrarOpciones() {
 			System.out.println("¿A que quieres jugar?");
 			System.out.println("\t1.-Adivinar una Numero");
 			System.out.println("\t2.-Adivinar una Numero Impar");
 			System.out.println("\t3.-Adivinar una Numero Par");
-		}
+	}
 	
 	public boolean chequeaOpcion(int opcion) {
 		//dejamos el return en una sola linea
 		return ((opcion == 1) || (opcion == 2) || (opcion == 3));
-	
 	}
 	
 	public int eligeOpciones() {
 		int opcion;
-		boolean flag=true;
+		boolean flag = true;
 		do {
 			mostrarOpciones();
 			System.out.print("Introduzca opción [1-4] ==> ");

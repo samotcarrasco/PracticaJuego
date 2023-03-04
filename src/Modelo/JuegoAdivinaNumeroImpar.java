@@ -26,7 +26,7 @@ public class JuegoAdivinaNumeroImpar extends JuegoAdivinaNumero{
 		System.out.println("Este juego consiste en adivinar un numero entero impar entre 0 y "+ NUMERO_MAX);
 		muestraVidasIniciales();
 	}
-	
+
 	@Override
 	public int numeroAleatorio() {
 		Random r = new Random(System.currentTimeMillis());
