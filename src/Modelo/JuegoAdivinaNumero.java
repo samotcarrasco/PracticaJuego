@@ -65,6 +65,8 @@ public class JuegoAdivinaNumero extends JuegoConVidas implements Jugable {
 		
 		
 	// Este método representa las reglas para juegar un único paso en el juego Adivina número
+	//placeholder, implementamos el método de la interfaz, no está definido en la clase padre
+	//Patron Template
 	@Override
 	public boolean juega (String numero) {
 		Integer numeroIntento= Integer.parseInt(numero);

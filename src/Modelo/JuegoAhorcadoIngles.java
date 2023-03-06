@@ -71,6 +71,11 @@ public class JuegoAhorcadoIngles extends JuegoConVidas implements Jugable{
 		}
 	}
 	
+	
+	// Este método representa las reglas para juegar un único paso en el juego Adivina número
+	//placeholder, implementamos el método de la interfaz, no está definido en la clase padre
+	//Patron Template
+	@Override
 	public boolean juega(String caracter) {
 		Character car= caracter.charAt(0);
 		if(existeCaracter(car)){
