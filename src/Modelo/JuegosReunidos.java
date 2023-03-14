@@ -5,7 +5,8 @@ import java.util.ArrayList;
 public class JuegosReunidos implements Serializable{
 	
 	//dejamos el número de vidas en una constante
-	public static final int VIDAS = 6;
+	public static final int VIDAS = 7;
+	public static final int VIDAS_AHORCADO = 5;
 	
 	/*
 	 * con las nuevas versiones de java no es necesario instanciar el tipo al instanciar los ArrayList  

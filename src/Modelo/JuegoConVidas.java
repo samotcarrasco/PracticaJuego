@@ -1,6 +1,8 @@
 package Modelo;
 
 import java.io.Serializable;
+import EntradaSalida.MyOutput;
+
 
 public abstract class JuegoConVidas implements Serializable {
     private int vidasIniciales;
@@ -15,18 +17,18 @@ public abstract class JuegoConVidas implements Serializable {
 
       
     public void muestraVidasIniciales(){
-        System.out.println("\t¡¡¡¡¡¡¡¡¡¡ATENCIÓN COMIENZAD CON " + vidasIniciales + " VIDAS!!!!!");
+        MyOutput.mostrarMensaje("\t¡¡¡¡¡¡¡¡¡¡ATENCIÓN COMIENZAD CON " + vidasIniciales + " VIDAS!!!!!");
     }
 
    
     public void muestraVidasRestantes(){
-        System.out.println("\tTe quedan " + vidas + " vidas");
+        MyOutput.mostrarMensaje("\tTe quedan " + vidas + " vidas");
     }
 
    
     public boolean quitaVida(){
         if (--this.vidas == 0) {
-            System.out.println("\tOOOOHHHHH!!!!!No te quedan vidas. Juego terminado....");
+            MyOutput.mostrarMensaje("\tOOOOHHHHH!!!!!No te quedan vidas. Juego terminado....");
             return false;}
         else{
             muestraVidasRestantes();
@@ -41,10 +43,10 @@ public abstract class JuegoConVidas implements Serializable {
 
     
     public void actualizaRecord(){
-        if(this.vidas == record) System.out.println("\tHAS IGUALADO EL RECORD!!!");
+        if(this.vidas == record) MyOutput.mostrarMensaje("\tHAS IGUALADO EL RECORD!!!");
         if(this.vidas > record){
             this.record = this.vidas;
-            System.out.println("\tHAS BATIDO EL RECORD EN ESTE JUEVO. TU NUEVO RECORD ES: " + this.record + "!!!!");
+            MyOutput.mostrarMensaje("\tHAS BATIDO EL RECORD EN ESTE JUEVO. TU NUEVO RECORD ES: " + this.record + "!!!!");
         }
     }
     

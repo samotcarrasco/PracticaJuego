@@ -1,7 +1,7 @@
 package Menus;
 import java.io.IOException;
 
-import EntradaSalida.MyInput;
+import EntradaSalida.*;
 import Modelo.JuegosReunidos;
 import Modelo.Jugable;
 
@@ -28,7 +28,7 @@ public class Menu {
 	}
 	
 	public void mostrarOpciones() {
-			System.out.println("¿A que quieres jugar?");
+			MyOutput.mostrarMensaje("¿A que quieres jugar?");
 			System.out.println("\t1.-Adivinar una Numero");
 			System.out.println("\t2.-Adivinar una Numero Impar");
 			System.out.println("\t3.-Adivinar una Numero Par");

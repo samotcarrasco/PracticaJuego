@@ -2,6 +2,8 @@ package Modelo;
 
 import java.util.ArrayList;
 import java.util.Random;
+import EntradaSalida.MyOutput;
+
 
 public class JuegoAhorcadoIngles extends JuegoConVidas implements Jugable{
 	//Atributos
@@ -21,11 +23,11 @@ public class JuegoAhorcadoIngles extends JuegoConVidas implements Jugable{
 	
 	//Metodos
 	public void muestraNombre() {
-		System.out.println("#### Juego del Ahorcado #####");
+		MyOutput.mostrarMensaje("#### Juego del Ahorcado #####");
 	}
 	
 	public void muestraInfo() {
-		System.out.println("Este juego consiste en adivinar una palabra en ingles.  ");
+		MyOutput.mostrarMensaje("Este juego consiste en adivinar una palabra en ingles.  ");
 		muestraVidasIniciales();
 	}
 	
@@ -43,7 +45,7 @@ public class JuegoAhorcadoIngles extends JuegoConVidas implements Jugable{
 	public void mostrarArray(ArrayList<Character> lista) {
 		for(Character auxiliar:lista)
 			System.out.print(auxiliar);
-		System.out.println();
+		MyOutput.mostrarMensaje("");
 	}
 	
 	public void reiniciaPartida() {
@@ -66,7 +68,7 @@ public class JuegoAhorcadoIngles extends JuegoConVidas implements Jugable{
 		if((cad.length() == 1) && (Character.isLetter(car)) && (Character.isLowerCase(car))){
 			return true;
 		}else {
-			System.out.println("\tEl formato no es correcto. Intentelo de nuevo");
+			MyOutput.mostrarMensaje("\tEl formato no es correcto. Intentelo de nuevo");
 			return false;
 		}
 	}
@@ -81,7 +83,7 @@ public class JuegoAhorcadoIngles extends JuegoConVidas implements Jugable{
 		if(existeCaracter(car)){
 			mostrarArray(guiones);
 			if(palabraAdivinar.equals(guiones)) {
-				System.out.println("Has acertado!!!!");
+				MyOutput.mostrarMensaje("Has acertado!!!!");
 				actualizaRecord();
 				return false;
 			}else  return true;

@@ -1,6 +1,6 @@
 package Modelo;
 
-import EntradaSalida.MyInput;
+import EntradaSalida.*;
 import Menus.*;
 
 public class PracticaJuego {
@@ -12,7 +12,7 @@ public class PracticaJuego {
 	        Menu menu = new MenuExtendido(juegosReunidos);
 	        menu.ejecuta();
 	        MyInput.serialize(juegosReunidos, "datos.dat");
-	        System.out.println("##### Saliendo del Juego #####");
+	        MyOutput.mostrarMensaje("##### Saliendo del Juego #####");
 
 	    }
 

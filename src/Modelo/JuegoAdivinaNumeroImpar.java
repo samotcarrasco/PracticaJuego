@@ -1,5 +1,7 @@
 package Modelo;
 import java.util.Random;
+import EntradaSalida.MyOutput;
+
 
 /*
  * Dentro de esta Clase, se utliza la constante NUMERO_MAX definida en la clase padre
@@ -18,12 +20,12 @@ public class JuegoAdivinaNumeroImpar extends JuegoAdivinaNumero{
 	 * */
 	@Override
 	public void muestraNombre() {
-		System.out.println("##### Juego Adivina Número Impar #####");
+		MyOutput.mostrarMensaje("##### Juego Adivina Número Impar #####");
 	}
 	
 	@Override
 	public void muestraInfo() {
-		System.out.println("Este juego consiste en adivinar un numero entero impar entre 0 y "+ NUMERO_MAX);
+		MyOutput.mostrarMensaje("Este juego consiste en adivinar un numero entero impar entre 0 y "+ NUMERO_MAX);
 		muestraVidasIniciales();
 	}
 
@@ -41,7 +43,7 @@ public class JuegoAdivinaNumeroImpar extends JuegoAdivinaNumero{
 		if (super.validaNumero(numero)) {
 		if(numero % 2 != 0) return true;
 			else {
-				System.out.println("el número " + numero + " no es impar. Intentelo de nuevo");
+				MyOutput.mostrarMensaje("el número " + numero + " no es impar. Intentelo de nuevo");
 				return false;
 			}
 		}	

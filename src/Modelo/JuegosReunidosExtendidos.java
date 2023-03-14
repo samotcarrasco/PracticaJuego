@@ -2,6 +2,8 @@ package Modelo;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
+import EntradaSalida.MyOutput;
+
 
 
 /* implementamos patron singleton, segun indicado en clase.
@@ -18,7 +20,7 @@ public class JuegosReunidosExtendidos extends JuegosReunidos{
 	    private JuegosReunidosExtendidos(ArrayList<String> diccionario) {
 	        super();
 	        //cogemos las vidas de la constante de la clase padre
-	        agregarJuego(new JuegoAhorcadoIngles(super.VIDAS, diccionario));
+	        agregarJuego(new JuegoAhorcadoIngles(super.VIDAS_AHORCADO, diccionario));
 	    }
 
 	    public static JuegosReunidosExtendidos getInstance(ArrayList<String> diccionario) {
@@ -29,12 +31,12 @@ public class JuegosReunidosExtendidos extends JuegosReunidos{
 	    }
 
 	    public static <A> A deserialize(String nombreFichero) {
-	        System.out.println("DeSerializing...");
+	        MyOutput.mostrarMensaje("DeSerializing...");
 	        try {
 	            FileInputStream fis = new FileInputStream(nombreFichero);
-	            System.out.println("el fichero es:  " + nombreFichero);
+	            MyOutput.mostrarMensaje("el fichero es:  " + nombreFichero);
 	            ObjectInputStream iis = new ObjectInputStream(fis);
-	            System.out.println(iis.available());
+	            MyOutput.mostrarMensaje(iis.available());
 	            return (A) iis.readObject();
 	        } catch (Exception e) {
 	            System.err.println("Problem: " + e);
